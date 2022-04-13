@@ -95,7 +95,7 @@ class Script:
 
     def __init__(self, path: PathLike) -> None:
 
-        self.path = path
+        self.path = Path(path).resolve()
 
     def run(self, working_dir: PathLike):
         """Run the script.
